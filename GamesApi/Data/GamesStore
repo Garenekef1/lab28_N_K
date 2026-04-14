@@ -1,0 +1,32 @@
+using GamesApi.Models;
+namespace GamesApi.Data;
+
+public static class GamesStore
+{
+    private static int _nextId = 4;
+    public static List<Game> Games { get; } = new()
+    {
+        new Game
+        {
+            Id = 1,
+            Title = "The Elder Scrolls IV: Oblivion",
+            Genre = "RPG",
+            ReleaseYear = 2006,
+        },
+        new Game
+        {
+            Id = 1,
+            Title = "Little Nightmares2",
+            Genre = "Platformer 3D",
+            ReleaseYear = 2021,
+        },
+new Game
+        {
+            Id = 1,
+            Title = "Detroit: Become Human",
+            Genre = "Game-Cinema",
+            ReleaseYear = 2018,
+        }
+    };
+    public static int NextID() => _nextId++;
+}
